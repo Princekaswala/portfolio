@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: portfolio
+  name: portfolio
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: portfolio
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: portfolio
+    spec:
+      containers:
+      - image: kaswaladocker/portfolio
+        name: portfolio
+        imagePullPolicy: Always
+        ports: 
+        - containerPort: 80
