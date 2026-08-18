@@ -16,7 +16,7 @@ spec:
         app: portfolio
     spec:
       containers:
-      - image: kaswaladocker/portfolio
+      - image: kaswaladocker/portfolio:v1
         name: portfolio
         imagePullPolicy: Always
         ports: 
